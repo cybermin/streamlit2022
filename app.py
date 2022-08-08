@@ -12,4 +12,6 @@ st.dataframe(df)
 
 
 # 지표 표시
-st.metric('배출량 최대값 :', df['배출량'].max())
+max_num = f"{df['배출량'].max():,}"
+
+st.metric('배출량 최대값 :', max_num)
