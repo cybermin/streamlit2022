@@ -1,5 +1,5 @@
 import streamlit as st
-import pandas
+import pandas as pd
 
 # 제목
 st.title('부산 RFID음식물 쓰레기 분석')
