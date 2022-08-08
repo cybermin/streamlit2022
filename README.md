@@ -7,3 +7,11 @@
 3. https://streamlit.io/ 에 로그인 
 4. https://streamlit.io/cloud 로 로그인
 5. New App 생성
+
+## streamlit API
+
+### Text elements
+1. 앱제목 
+    + st.title() : 제목 형식으로 텍스트 표시 
+    + st.header(): 헤더 형식으로 텍스트 표시
+    + st.subheader() : 부제 형식으로 텍스트 표시
