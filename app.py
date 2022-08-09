@@ -28,6 +28,7 @@ st.line_chart(dfg)
 st.bar_chart(dfg)
 
 #select 
-option = st.selectbox(df['시군구명'].unique())
-
+option = st.selectbox(
+    '시군구명 선택', 
+    (df['시군구명'].unique()))
 st.write('You selected:', option)
