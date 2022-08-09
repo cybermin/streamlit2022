@@ -35,3 +35,11 @@ option = st.selectbox(
 st.write('You selected:', option)
 df_sel = df[df['시군구명'] == option]
 st.dataframe(df_sel)
+
+
+options = st.multiselect(
+     '열명선택',
+     list(df.columns),
+     [])
+
+st.write('You selected:', options)
