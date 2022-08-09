@@ -28,12 +28,12 @@ st.line_chart(dfg)
 st.bar_chart(dfg)
 
 #select 
-option = st.selectbox(
+option1 = st.selectbox(
     '시군구명 선택', 
     (df['시군구명'].unique()))
 
-st.write('You selected:', option)
-df_sel = df[df['시군구명'] == option]
+st.write('You selected:', option1)
+df_sel = df[df['시군구명'] == option1]
 st.dataframe(df_sel)
 
 
@@ -42,5 +42,5 @@ options = st.multiselect(
      list(df.columns),
      [])
 
-dfm = df[options]
+dfm = df_sel[options]
 st.dataframe(dfm)
