@@ -13,7 +13,7 @@ st.dataframe(df)
 
 # 지표 표시
 max_num1 = f"{df['배출량'].max():,}"
-max_area1 = f"{df[df['배출량'] == df['배출량'].max()].index}"
+max_area1 = f"{df[df[df['배출량'] == df['배출량'].max()].index]}"
  
  
 
