@@ -33,9 +33,7 @@ option1 = st.selectbox(
     (df['시군구명'].unique()))
 
 st.write('You selected:', option1)
-df_sel = df[df['시군구명'] == option1]
-st.dataframe(df_sel)
-
+df_sel = df[df['시군구명'] == option1] 
 
 options = st.multiselect(
      '열명선택',
