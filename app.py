@@ -42,4 +42,5 @@ options = st.multiselect(
      list(df.columns),
      [])
 
-st.write('You selected:', options)
+dfm = df[options]
+st.dataframe(dfm)
