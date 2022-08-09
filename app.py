@@ -13,10 +13,8 @@ st.dataframe(df)
 
 # 지표 표시
 max_num1 = f"{df['배출량'].max():,}"
-idx = df[df['배출량'] == df['배출량'].max()].index
-
-
-max_area1 = f"{df.loc[idx, '시군구명']}"
+x = df[df['배출량'] == df['배출량'].max()]['시군구명']
+max_area1 = f"{list(x)[0]}"
  
  
 
