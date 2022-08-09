@@ -2,18 +2,6 @@ import streamlit as st
 import pandas as pd
 
 
-# Using "with" notation
-with st.sidebar:
-    #select 
-    option1 = st.selectbox(
-    '시군구명 선택', 
-    (df['시군구명'].unique()))
-
-    options = st.multiselect(
-     '열명선택',
-     list(df.columns),
-     [])
-
 
 # 제목
 st.title('부산 RFID음식물 쓰레기 분석')
@@ -41,11 +29,30 @@ dfg = df.groupby('시군구명').mean()[['배출량']]
 st.line_chart(dfg)
 st.bar_chart(dfg)
 
+option1 = st.selectbox(
+    '시군구명 선택', 
+    (df['시군구명'].unique()))
 
 
 st.write('You selected:', option1)
 df_sel = df[df['시군구명'] == option1] 
 
-
+options = st.multiselect(
+     '열명선택',
+     list(df.columns),
+     [])
 dfm = df_sel[options]
 st.dataframe(dfm)
+
+# Using "with" notation
+with st.sidebar:
+    #select 
+    option3 = st.selectbox(
+    '시군구명 선택', 
+    (df['시군구명'].unique()))
+
+    options4 = st.multiselect(
+     '열명선택',
+     list(df.columns),
+     [])
+
