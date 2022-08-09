@@ -25,3 +25,4 @@ col2.metric('배출량 최대 지역 :', max_area1)
 # 그래프 표시
 dfg = df.groupby('시군구명').mean()[['배출량']]
 st.line_chart(dfg)
+st.bar_chart(dfg)
