@@ -17,7 +17,10 @@ x = df[df['배출량'] == df['배출량'].max()]['시군구명']
 max_area1 = f"{list(x)[0]}"
  
  
-
 col1, col2 = st.columns(2)
 col1.metric('배출량 최대값 :', max_num1)
 col2.metric('배출량 최대 지역 :', max_area1)
+
+
+# 그래프 표시
+st.line_chart(df)
