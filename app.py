@@ -46,13 +46,14 @@ st.dataframe(dfm)
 
 # Using "with" notation
 with st.sidebar:
+    df2 = pd.read_csv('부산RFID음식물쓰레기.csv')
     #select 
     option3 = st.selectbox(
     '시군구명 선택', 
-    (df['시군구명'].unique()))
+    (df2['시군구명'].unique()))
 
     options4 = st.multiselect(
      '열명선택',
-     list(df.columns),
+     list(df2.columns),
      [])
 
