@@ -31,4 +31,7 @@ st.bar_chart(dfg)
 option = st.selectbox(
     '시군구명 선택', 
     (df['시군구명'].unique()))
+
 st.write('You selected:', option)
+df_sel = df[df['시군구명'] == option]
+st.dataframe(df_sel)
