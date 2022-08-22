@@ -24,6 +24,11 @@
 
 ### Chart elements
 3. 챠트 그리기
-    + st.line_chart(my_data_frame)
+    + st.line_chart(데이터프레임)
+    + st.bar_chart(데이터프레임)
 
+### sidebar 
+4. 사이드바
+    + 앱에 대화형 기능을 추가할 수 있을 뿐만 아니라 사이드바로 구성
+    + with st.sidebar:
 

@@ -37,3 +37,22 @@ dfg = dfg[['기숙사수용률', '입사경쟁률']]
 #st.dataframe(dfg)
 st.line_chart(dfg['기숙사수용률'])
 st.bar_chart(dfg['입사경쟁률'])
+
+#사이드바 
+with st.sidebar:
+    gubun = st.radio(
+     "설립구분선택",
+     ('전국', '국공립', '사립'))
+
+    if genre == '전국':
+        dfradio = df.copy()
+    elif genre == '국공립':
+        dfradio =df[df['설립구분'] != '사립']
+    else:
+        dfradio =df[df['설립구분'] != '사립']
+
+st.subheader(genre + '현황')
+dfradiog = dfradio.groupby(['지역']).mean()
+dfradiog = dfradio[['기숙사수용률', '입사경쟁률']]
+st.line_chart(dfradiog['기숙사수용률'])
+st.bar_chart(dfradiog['입사경쟁률'])
