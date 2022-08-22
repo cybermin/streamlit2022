@@ -51,7 +51,7 @@ with st.sidebar:
     else:
         dfradio =df[df['설립구분'] != '사립']
 
-st.subheader(genre + '현황')
+st.subheader(gubun + '현황')
 dfradiog = dfradio.groupby(['지역']).mean()
 dfradiog = dfradio[['기숙사수용률', '입사경쟁률']]
 st.line_chart(dfradiog['기숙사수용률'])
