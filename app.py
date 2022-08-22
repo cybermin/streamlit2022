@@ -53,6 +53,6 @@ with st.sidebar:
 
 st.subheader(gubun + '현황')
 dfradiog = dfradio.groupby(['지역']).mean()
-dfradiog = dfradio[['기숙사수용률', '입사경쟁률']]
+dfradiog = dfradiog[['기숙사수용률', '입사경쟁률']]
 st.line_chart(dfradiog['기숙사수용률'])
 st.bar_chart(dfradiog['입사경쟁률'])
