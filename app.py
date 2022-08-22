@@ -10,14 +10,13 @@ st.header('데이터 표시')
 # 데이터 프레임 불러오기
 df = pd.read_csv('기숙사수용현황.csv', encoding='cp949')
 
-'''
-st.subheader('동적 데이터 프레임 표시')
-st.dataframe(df)
 
-st.subheader('정적 데이터 프레임 표시')
-st.table(df)
-'''
+#st.subheader('동적 데이터 프레임 표시')
+#st.dataframe(df)
+
+#st.subheader('정적 데이터 프레임 표시')
+#st.table(df)
 
 
 st.header('지표 표시')
-st.matric('전국대학수', len(df['학교'].unique()))
+st.matric('전국대학수', str(len(df['학교'].unique())))
