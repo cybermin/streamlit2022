@@ -49,8 +49,17 @@ with st.sidebar:
     else:
         dfradio =df[df['설립구분'] == '사립']
 
+    area = st.text_input('지역입력', '부산')
+    dfarea = df[df['지역'] == area]
+ 
+
 st.subheader(gubun + '현황')
 dfradiog = dfradio.groupby(['지역']).mean()
 dfradiog = dfradiog[['기숙사수용률', '입사경쟁률']]
 st.line_chart(dfradiog['기숙사수용률'])
 st.bar_chart(dfradiog['입사경쟁률'])
+
+st.subheader(area + '현황')
+dfareag = dfarea.groupby(['학교']).mean()
+st.line_chart(dfareag['기숙사수용률'])
+st.bar_chart(dfareag['입사경쟁률'])
