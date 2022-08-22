@@ -31,6 +31,8 @@ col2.metric("국공립학교수", num2, f'{round(num2/num1,2)*100}%')
 col3.metric("사립학교수", num3, f'{round(num3/num1,2)*100}%')
 
 st.header('지역별 기숙사 현황')
-dfg = df.groupby(['지역']).mean()[['기숙사수용률', '입사경쟁률']]
+dfg = df.groupby(['지역']).mean()
+dfg = dfg[['기숙사수용률', '입사경쟁률']]
+
 st.dataframe(dfg)
 st.line_chart(dfg)
