@@ -35,4 +35,3 @@ dfg = df.groupby(['지역']).mean()
 dfg = dfg[['기숙사수용률', '입사경쟁률']]
 
 st.dataframe(dfg)
-st.line_chart(dfg)
