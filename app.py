@@ -42,14 +42,12 @@ st.bar_chart(dfg['입사경쟁률'])
 with st.sidebar:
     gubun = st.radio(
      "설립구분선택",
-     ('전국', '국공립', '사립'))
+     ('국공립', '사립'))
     
-    if gubun == '전국':
-        dfradio = df.copy()
-    elif gubun == '국공립':
+    if gubun == '국공립':
         dfradio =df[df['설립구분'] != '사립']
     else:
-        dfradio =df[df['설립구분'] != '사립']
+        dfradio =df[df['설립구분'] == '사립']
 
 st.subheader(gubun + '현황')
 dfradiog = dfradio.groupby(['지역']).mean()
