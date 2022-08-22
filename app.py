@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import matplotlib.pyplot as plt
 
 
 # 제목
@@ -35,4 +35,8 @@ dfg = df.groupby(['지역']).mean()
 dfg = dfg[['기숙사수용률', '입사경쟁률']]
 
 #st.dataframe(dfg)
-st.line_chart(dfg)
+#st.line_chart(dfg)
+fig, ax = plt.subplots()
+ax.plot(dfg)
+
+st.pyplot(fig)
