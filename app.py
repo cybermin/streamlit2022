@@ -34,4 +34,5 @@ st.header('지역별 기숙사 현황')
 dfg = df.groupby(['지역']).mean()
 dfg = dfg[['기숙사수용률', '입사경쟁률']]
 
-st.dataframe(dfg)
+#st.dataframe(dfg)
+st.line_chart(dfg)
