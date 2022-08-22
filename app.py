@@ -8,7 +8,7 @@ st.title('대학 기숙사 분석')
 #st.header('데이터 표시')
 
 # 데이터 프레임 불러오기
-df = pd.read_csv('기숙사수용현황.csv', encoding='cp949')
+df = pd.read_csv('기숙사수용현황분석.csv', encoding='cp949')
 df = df[df['학교종류'] == '대학교']
 
 #st.subheader('동적 데이터 프레임 표시')
