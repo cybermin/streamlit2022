@@ -23,6 +23,6 @@ st.header('지표 표시')
 #st.write(len(df['학교'].unique()))
 
 col1, col2, col3 = st.columns(3)
-col1.metric("전국대학수", "70 °F", "1.2 °F")
+col1.metric("전국대학수", len(df['학교'].unique()), "1.2 °F")
 col2.metric("국공립학교수", "9 mph", "-8%")
 col3.metric("사립학교수", "86%", "4%")
